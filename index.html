@@ -10,28 +10,50 @@
 <!--    fontawesome-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     <title>Pure Bootstrap Website</title>
-  </head>
-  <body>    
-    
-    <!-- navbar -->
-     <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
 
+    <style>
+      body {
+        position: relative;
+        height: 100vh;
+        overflow-y: scroll;
+      }
+      .nav-link {
+        transition: all 1s;
+      }
+      .nav-link.active,
+      .nav-link:hover {
+        background-color: #f5f5f5;
+        color: #010101!important;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#topNav" data-offset="0">    
+    <!-- navbar -->
+    <nav id="topNav" class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
         <a href="https://patel-chetan-h.github.io/portfolio" class="navbar-brand"><i class="fas fa-child text-warning fa-2x"></i></a>
         <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
         
         <div class="collapse navbar-collapse justify-content-between" id="nav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="https://patel-chetan-h.github.io/portfolio">Portfolio</a></li>
-                <li class="nav-item dropdown"><a class="nav-link text-light text-uppercase font-weight-bold px-3 dropdown-toggle"  data-toggle="dropdown">Projects</a>
-                    <div class="dropdown-menu px-1 py-3">
-                        <a class="dropdown-item" href="./admin-dashboard/">Project - Admin Dshboard</a>
-                        <a class="dropdown-item" href="./book-store/">Project - Book Store</a>
-                        <a class="dropdown-item" href="./photoX/">Project - photoX</a>
-                    </div>
+                <li class="nav-item">
+                  <a class="nav-link text-light text-uppercase font-weight-bold px-3" href="#home">Home</a>
                 </li>
-                <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="#">Team</a></li>
-                <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="#">Contact</a></li>
+                <li class="nav-item">
+                  <a class="nav-link text-light text-uppercase font-weight-bold px-3" href="https://patel-chetan-h.github.io/portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light text-uppercase font-weight-bold px-3" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#projects" class="nav-link text-light text-uppercase font-weight-bold px-3">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light text-uppercase font-weight-bold px-3" href="#team">Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light text-uppercase font-weight-bold px-3" href="#contact">Contact</a>
+                </li>
             </ul>
 
             <form class="form-inline ml-3">
@@ -42,28 +64,28 @@
                     </div>
                 </div>
             </form>
-         </div>
+        </div>
 
-     </nav>
-     <!-- end of navbar -->
+    </nav>
+    <!-- end of navbar -->
 
-     <!-- banner -->
-     <section>
-         <div class="container-fluid">
-             <div class="row bg-info justify-content-center align-items-center" style="height: 100vh">
+    <!-- banner -->
+    <section id="home">
+        <div class="container-fluid">
+            <div class="row bg-info justify-content-center align-items-center" style="height: 100vh">
                 <div class="col-sm-10 text-center">
                     <h1 class="display-2 text-capitalize"><span class="text-warning">pure bootstrap </span><span class="text-white font-weight-bold">website</span></h1>
                     <h2 class="font-weight-light font-italic text-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
                     <a href="#" class="btn btn-warning btn-lg px-4 m-3">Press Here</a>
                     <a href="#" class="btn btn-danger btn-lg px-4 m-3">Press Here</a>
                 </div>
-             </div>
-         </div>
-     </section>
-     <!-- end of banner -->
-    
-     <!-- skills -->
-     <section class="bg-light p-5">
+            </div>
+        </div>
+    </section>
+    <!-- end of banner -->
+  
+    <!-- skills -->
+    <section id="skills" class="bg-light p-5">
         <div class="container-fluid">
             <!-- title -->
             <div class="row">
@@ -94,51 +116,53 @@
                 </div>
             </div>
         </div>
-     </section>
-     <!-- end of skills -->
+    </section>
+    <!-- end of skills -->
 
-     <!-- projects -->
-     <section class="p-5">
+    <!-- projects -->
+    <section id="projects" class="p-5">
         <div class="container-fluid">
             <!-- title -->
             <div class="row">
                 <div class="col text-center mb-3">
                     <h1 class="text-warning display-2">Projects</h1>
-                    <p class="lead text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, a. Omnis, numquam!</p>
+                    <p class="lead text-secondary">Learned and built various Bootstrap based projects!</p>
                 </div>
             </div>
             <!-- end of title -->
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
-                    <img src="images/project1.jpg" class="img-thumbnail">
-                    <h2 class="my-3 text-warning">Project One</h2>
-                    <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, nemo!</p>
+                    <a href="https://patel-chetan-h.github.io/portfolio">
+                      <img src="images/project1.jpg" class="img-thumbnail">
+                    </a>
+                    <h2 class="my-3 text-warning">My Portfolio</h2>
+                    <p class="text-muted">Built using Bootsrap 5</p>
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-3">
                     <img src="images/project2.jpg" class="img-thumbnail">
-                    <h2 class="my-3 text-warning">Project Two</h2>
-                    <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, nemo!</p>
+                    <h2 class="my-3 text-warning">Admin Dashboard</h2>
+                    <p class="text-muted">Built using bootsrap 4, along with minor CSS and JS</p>
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-4">
                     <img src="images/project3.jpg" class="img-thumbnail">
-                    <h2 class="my-3 text-warning">Project Three</h2>
-                    <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, nemo!</p>
+                    <h2 class="my-3 text-warning">Book Store</h2>
+                    <p class="text-muted">Built using bootsrap 4, light box, along with minimal CSS and JS</p>
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-5">
                     <img src="images/project4.jpg" class="img-thumbnail">
-                    <h2 class="my-3 text-warning">Project Four</h2>
-                    <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, nemo!</p>
+                    <h2 class="my-3 text-warning">PhotoX</h2>
+                    <p class="text-muted">uilt using bootsrap 4, along with custom CSS and JS</p>
                 </div>
             </div>
         </div>
-     </section>
-     <!-- end of projects -->
-    
-     <!-- team -->
-     <section class="p-sm-5 p-2 bg-secondary">
-        <div class="container-fluid">
-             <!-- title -->
-             <div class="row">
+    </section>
+    <!-- end of projects -->
+  
+    <!-- team -->
+    <section id="team" class="p-sm-5 p-2 bg-secondary">
+      <div class="container-fluid">
+            <!-- title -->
+            <div class="row">
                 <div class="col text-center mb-3">
                     <h1 class="text-warning display-2">Team</h1>
                     <p class="lead text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, a. Omnis, numquam!</p>
@@ -202,11 +226,11 @@
                 </div>
             </div>
         </div>
-     </section>
-     <!-- end of team -->
-     
-     <!-- progress -->
-     <section class="p-5">
+    </section>
+    <!-- end of team -->
+    
+    <!-- progress -->
+    <section id="progress" class="p-5">
         <div class="container-fluid">
             <!-- title -->
             <div class="row">
@@ -245,14 +269,14 @@
                 </div>
             </div>
         </div>
-     </section>
-     <!-- end of progress -->
+    </section>
+    <!-- end of progress -->
 
-     <!-- contact -->
-     <section class="p-5 bg-light">
-        <div class="container-fluid">
-             <!-- title -->
-             <div class="row">
+    <!-- contact -->
+    <section id="contact" class="p-5 bg-light">
+      <div class="container-fluid">
+            <!-- title -->
+            <div class="row">
                 <div class="col text-center mb-3">
                     <h1 class="text-warning display-2">Contact Us</h1>
                     <p class="lead text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, a. Omnis, numquam!</p>
@@ -283,11 +307,11 @@
                 </div>
             </div>
         </div>
-     </section>
-     <!-- end of contact -->
+    </section>
+    <!-- end of contact -->
 
-     <!-- footer -->
-     <footer class="bg-secondary">
+    <!-- footer -->
+    <footer class="bg-secondary">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
@@ -303,12 +327,28 @@
                 </div>
             </div>
         </div>
-     </footer>
-     <!-- end of footer -->
+    </footer>
+    <!-- end of footer -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <!-- <script>
+      $(window).scroll(function() {
+          let position = $(this).scrollTop();
+
+          $('section').each(function() {
+              let target = $(this).offset().top;
+              let id = $(this).attr('id');
+              console.log('position= ' + position);
+              console.log('target= ' + target)
+              if (position >= target) {
+                  $('#topNav .nav-link').removeClass('active');
+                  $('#topNav .nav-link[href=#' + id + ']').addClass('active');
+              }
+          });
+      });
+    </script> -->
   </body>
 </html>
